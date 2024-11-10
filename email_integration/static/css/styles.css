@@ -1,0 +1,47 @@
+.progress-wrapper {
+    margin: 20px 0;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 5px;
+}
+
+.progress {
+    height: 25px;
+    background-color: #e9ecef;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #007bff;
+    color: white;
+    transition: width 0.3s ease;
+}
+
+.email-list {
+    margin-top: 30px;
+}
+
+.table {
+    width: 100%;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.table th {
+    background: #f8f9fa;
+    padding: 12px;
+}
+
+.table td {
+    padding: 12px;
+    border-top: 1px solid #dee2e6;
+}
+
+.fas.fa-paperclip {
+    color: #6c757d;
+} 

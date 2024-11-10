@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container">
+    <div class="progress-wrapper">
+        <div class="progress">
+            <div id="progress-bar" class="progress-bar" role="progressbar" style="width: 0%">
+                <span id="progress-text">Ожидание синхронизации...</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="email-list">
+        <table class="table" id="emails-table">
+            <thead>
+                <tr>
+                    <th>Тема</th>
+                    <th>Отправитель</th>
+                    <th>Получено</th>
+                    <th>Вложения</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for email in emails %}
+                <tr>
+                    <td>{{ email.subject }}</td>
+                    <td>{{ email.sender }}</td>
+                    <td>{{ email.received_date|date:"d.m.Y H:i" }}</td>
+                    <td>
+                        {% if email.attachments %}
+                            <i class="fas fa-paperclip"></i> {{ email.attachments|length }}
+                        {% endif %}
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+
+{% block extra_js %}
+<script src="{% static 'js/email-sync.js' %}"></script>
+{% endblock %}
+{% endblock %} 
