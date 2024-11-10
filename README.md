@@ -18,6 +18,12 @@
 - Redis для Channel layers
 - Bootstrap 5 для фронтенда
 
-## Установка и запуск
+## Тестирование:
 
-1. Клонируйте репозиторий:
+```bash
+# Создайте тестового пользователя
+python manage.py createsuperuser
+
+# Проверьте работоспособность сервиса
+python manage.py test
+```
